@@ -22,36 +22,36 @@ exports.profile = (pictureUrl, name) => {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [{
-                        "type": "text",
-                        "text": name,
-                        "weight": "bold",
-                        "size": "xl",
-                        "align": "center",
-                        "offsetBottom": "10px"
-                    },
-                    {
-                        "type": "image",
-                        "url": pictureUrl,
-                        "align": "center",
-                        "size": "100%",
-                        "aspectMode": "cover",
-                        "aspectRatio": "3:4"
-                    },
-                    {
-                        "type": "text",
-                        "text": "Software Developer",
-                        "size": "md",
-                        "color": "#aaaaaa",
-                        "align": "center"
-                    },
-                    {
-                        "type": "text",
-                        "text": "Employee ID: 12345678",
-                        "size": "sm",
-                        "color": "#aaaaaa",
-                        "align": "center",
-                        "margin": "sm"
-                    }
+                    "type": "text",
+                    "text": name,
+                    "weight": "bold",
+                    "size": "xl",
+                    "align": "center",
+                    "offsetBottom": "10px"
+                },
+                {
+                    "type": "image",
+                    "url": pictureUrl,
+                    "align": "center",
+                    "size": "100%",
+                    "aspectMode": "cover",
+                    "aspectRatio": "3:4"
+                },
+                {
+                    "type": "text",
+                    "text": "Software Developer",
+                    "size": "md",
+                    "color": "#aaaaaa",
+                    "align": "center"
+                },
+                {
+                    "type": "text",
+                    "text": "Employee ID: 12345678",
+                    "size": "sm",
+                    "color": "#aaaaaa",
+                    "align": "center",
+                    "margin": "sm"
+                }
                 ],
                 "backgroundColor": "#f0f4f8"
             }
@@ -80,121 +80,121 @@ exports.service = () => {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [{
-                        "type": "text",
-                        "text": "Bank Services",
-                        "weight": "bold",
-                        "size": "xl",
-                        "align": "center",
-                        "margin": "md"
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "lg"
+                    "type": "text",
+                    "text": "Bank Services",
+                    "weight": "bold",
+                    "size": "xl",
+                    "align": "center",
+                    "margin": "md"
+                },
+                {
+                    "type": "separator",
+                    "margin": "lg"
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "md",
+                    "margin": "lg",
+                    "contents": [{
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [{
+                            "type": "button",
+                            "style": "primary",
+                            "action": {
+                                "type": "message",
+                                "label": "Check Balance",
+                                "text": "Check Balance"
+                            },
+                            "color": "#0084B6",
+                            "margin": "sm",
+                            "adjustMode": "shrink-to-fit"
+                        },
+                        {
+                            "type": "button",
+                            "style": "primary",
+                            "action": {
+                                "type": "message",
+                                "label": "Transfer Funds",
+                                "text": "Transfer Funds"
+                            },
+                            "color": "#28A745",
+                            "margin": "sm",
+                            "adjustMode": "shrink-to-fit"
+                        }
+                        ]
                     },
                     {
                         "type": "box",
-                        "layout": "vertical",
-                        "spacing": "md",
-                        "margin": "lg",
+                        "layout": "horizontal",
                         "contents": [{
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "button",
-                                        "style": "primary",
-                                        "action": {
-                                            "type": "message",
-                                            "label": "Check Balance",
-                                            "text": "Check Balance"
-                                        },
-                                        "color": "#0084B6",
-                                        "margin": "sm",
-                                        "adjustMode": "shrink-to-fit"
-                                    },
-                                    {
-                                        "type": "button",
-                                        "style": "primary",
-                                        "action": {
-                                            "type": "message",
-                                            "label": "Transfer Funds",
-                                            "text": "Transfer Funds"
-                                        },
-                                        "color": "#28A745",
-                                        "margin": "sm",
-                                        "adjustMode": "shrink-to-fit"
-                                    }
-                                ]
+                            "type": "button",
+                            "style": "primary",
+                            "action": {
+                                "type": "message",
+                                "label": "Pay Bills",
+                                "text": "Pay Bills"
                             },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "button",
-                                        "style": "primary",
-                                        "action": {
-                                            "type": "message",
-                                            "label": "Pay Bills",
-                                            "text": "Pay Bills"
-                                        },
-                                        "color": "#FFC107",
-                                        "margin": "sm",
-                                        "adjustMode": "shrink-to-fit"
-                                    },
-                                    {
-                                        "type": "button",
-                                        "style": "primary",
-                                        "action": {
-                                            "type": "message",
-                                            "label": "New Account",
-                                            "text": "Open New Account"
-                                        },
-                                        "color": "#17A2B8",
-                                        "margin": "sm",
-                                        "adjustMode": "shrink-to-fit"
-                                    }
-                                ]
+                            "color": "#FFC107",
+                            "margin": "sm",
+                            "adjustMode": "shrink-to-fit"
+                        },
+                        {
+                            "type": "button",
+                            "style": "primary",
+                            "action": {
+                                "type": "message",
+                                "label": "New Account",
+                                "text": "Open New Account"
                             },
-                            {
-                                "type": "button",
-                                "style": "primary",
-                                "action": {
-                                    "type": "message",
-                                    "label": "Loan Services",
-                                    "text": "Loan Services"
-                                },
-                                "color": "#DC3545",
-                                "margin": "sm"
-                            }
+                            "color": "#17A2B8",
+                            "margin": "sm",
+                            "adjustMode": "shrink-to-fit"
+                        }
                         ]
+                    },
+                    {
+                        "type": "button",
+                        "style": "primary",
+                        "action": {
+                            "type": "message",
+                            "label": "Loan Services",
+                            "text": "Loan Services"
+                        },
+                        "color": "#DC3545",
+                        "margin": "sm"
                     }
+                    ]
+                }
                 ]
             },
             "footer": {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [{
-                        "type": "text",
-                        "text": "Kasikorn Bank",
-                        "weight": "bold",
-                        "size": "md",
-                        "align": "center",
-                        "margin": "md"
-                    },
-                    {
-                        "type": "text",
-                        "text": "Bangkok Branch",
-                        "size": "sm",
-                        "color": "#aaaaaa",
-                        "align": "center"
-                    },
-                    {
-                        "type": "text",
-                        "text": "Tel: +66 2 123 4567",
-                        "size": "sm",
-                        "color": "#aaaaaa",
-                        "align": "center",
-                        "margin": "md"
-                    }
+                    "type": "text",
+                    "text": "Kasikorn Bank",
+                    "weight": "bold",
+                    "size": "md",
+                    "align": "center",
+                    "margin": "md"
+                },
+                {
+                    "type": "text",
+                    "text": "Bangkok Branch",
+                    "size": "sm",
+                    "color": "#aaaaaa",
+                    "align": "center"
+                },
+                {
+                    "type": "text",
+                    "text": "Tel: +66 2 123 4567",
+                    "size": "sm",
+                    "color": "#aaaaaa",
+                    "align": "center",
+                    "margin": "md"
+                }
                 ]
             }
         }
@@ -212,300 +212,300 @@ exports.bill = () => {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [{
-                        "type": "text",
-                        "text": "Thai Delight Restaurant",
-                        "weight": "bold",
-                        "size": "xl"
-                    },
-                    {
-                        "type": "text",
-                        "text": "123 Bangkok St, Bangkok, Thailand",
-                        "size": "sm",
-                        "color": "#aaaaaa"
-                    },
-                    {
-                        "type": "text",
-                        "text": "Tel: +66 2 123 4567",
-                        "size": "sm",
-                        "color": "#aaaaaa"
-                    }
+                    "type": "text",
+                    "text": "Thai Delight Restaurant",
+                    "weight": "bold",
+                    "size": "xl"
+                },
+                {
+                    "type": "text",
+                    "text": "123 Bangkok St, Bangkok, Thailand",
+                    "size": "sm",
+                    "color": "#aaaaaa"
+                },
+                {
+                    "type": "text",
+                    "text": "Tel: +66 2 123 4567",
+                    "size": "sm",
+                    "color": "#aaaaaa"
+                }
                 ]
             },
             "body": {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [{
-                        "type": "text",
-                        "text": "Food Bill",
-                        "weight": "bold",
-                        "size": "xl"
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "md"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "margin": "lg",
-                        "spacing": "sm",
-                        "contents": [{
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "1. Fried Rice (2 plates)",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$10.00",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "2. Pad Thai (1 plate)",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$6.00",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "3. Tom Yum Soup (1 bowl)",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$7.00",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "4. Green Curry (1 bowl)",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$8.00",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "5. Spring Rolls (3 pcs)",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$4.00",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "6. Papaya Salad (1 plate)",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$5.50",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "7. Sticky Rice (1 bowl)",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$3.00",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "8. Mango with Sticky Rice (1 plate)",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$6.50",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "9. Thai Iced Tea (1 glass)",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$3.50",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "10. Coconut Water (1 glass)",
-                                        "size": "sm",
-                                        "color": "#555555",
-                                        "flex": 0
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "$4.50",
-                                        "size": "sm",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "lg"
-                    },
-                    {
+                    "type": "text",
+                    "text": "Food Bill",
+                    "weight": "bold",
+                    "size": "xl"
+                },
+                {
+                    "type": "separator",
+                    "margin": "md"
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "margin": "lg",
+                    "spacing": "sm",
+                    "contents": [{
                         "type": "box",
                         "layout": "horizontal",
-                        "margin": "lg",
                         "contents": [{
-                                "type": "text",
-                                "text": "Subtotal",
-                                "size": "md",
-                                "color": "#555555"
-                            },
-                            {
-                                "type": "text",
-                                "text": "$53.00",
-                                "size": "md",
-                                "color": "#111111",
-                                "align": "end"
-                            }
+                            "type": "text",
+                            "text": "1. Fried Rice (2 plates)",
+                            "size": "sm",
+                            "color": "#555555",
+                            "flex": 0
+                        },
+                        {
+                            "type": "text",
+                            "text": "$10.00",
+                            "size": "sm",
+                            "color": "#111111",
+                            "align": "end"
+                        }
                         ]
                     },
                     {
                         "type": "box",
                         "layout": "horizontal",
                         "contents": [{
-                                "type": "text",
-                                "text": "Service Charge (10%)",
-                                "size": "md",
-                                "color": "#555555"
-                            },
-                            {
-                                "type": "text",
-                                "text": "$5.30",
-                                "size": "md",
-                                "color": "#111111",
-                                "align": "end"
-                            }
+                            "type": "text",
+                            "text": "2. Pad Thai (1 plate)",
+                            "size": "sm",
+                            "color": "#555555",
+                            "flex": 0
+                        },
+                        {
+                            "type": "text",
+                            "text": "$6.00",
+                            "size": "sm",
+                            "color": "#111111",
+                            "align": "end"
+                        }
                         ]
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "lg"
                     },
                     {
                         "type": "box",
                         "layout": "horizontal",
-                        "margin": "lg",
                         "contents": [{
-                                "type": "text",
-                                "text": "Total",
-                                "size": "md",
-                                "weight": "bold"
-                            },
-                            {
-                                "type": "text",
-                                "text": "$58.30",
-                                "size": "md",
-                                "color": "#111111",
-                                "align": "end",
-                                "weight": "bold"
-                            }
+                            "type": "text",
+                            "text": "3. Tom Yum Soup (1 bowl)",
+                            "size": "sm",
+                            "color": "#555555",
+                            "flex": 0
+                        },
+                        {
+                            "type": "text",
+                            "text": "$7.00",
+                            "size": "sm",
+                            "color": "#111111",
+                            "align": "end"
+                        }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [{
+                            "type": "text",
+                            "text": "4. Green Curry (1 bowl)",
+                            "size": "sm",
+                            "color": "#555555",
+                            "flex": 0
+                        },
+                        {
+                            "type": "text",
+                            "text": "$8.00",
+                            "size": "sm",
+                            "color": "#111111",
+                            "align": "end"
+                        }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [{
+                            "type": "text",
+                            "text": "5. Spring Rolls (3 pcs)",
+                            "size": "sm",
+                            "color": "#555555",
+                            "flex": 0
+                        },
+                        {
+                            "type": "text",
+                            "text": "$4.00",
+                            "size": "sm",
+                            "color": "#111111",
+                            "align": "end"
+                        }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [{
+                            "type": "text",
+                            "text": "6. Papaya Salad (1 plate)",
+                            "size": "sm",
+                            "color": "#555555",
+                            "flex": 0
+                        },
+                        {
+                            "type": "text",
+                            "text": "$5.50",
+                            "size": "sm",
+                            "color": "#111111",
+                            "align": "end"
+                        }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [{
+                            "type": "text",
+                            "text": "7. Sticky Rice (1 bowl)",
+                            "size": "sm",
+                            "color": "#555555",
+                            "flex": 0
+                        },
+                        {
+                            "type": "text",
+                            "text": "$3.00",
+                            "size": "sm",
+                            "color": "#111111",
+                            "align": "end"
+                        }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [{
+                            "type": "text",
+                            "text": "8. Mango with Sticky Rice (1 plate)",
+                            "size": "sm",
+                            "color": "#555555",
+                            "flex": 0
+                        },
+                        {
+                            "type": "text",
+                            "text": "$6.50",
+                            "size": "sm",
+                            "color": "#111111",
+                            "align": "end"
+                        }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [{
+                            "type": "text",
+                            "text": "9. Thai Iced Tea (1 glass)",
+                            "size": "sm",
+                            "color": "#555555",
+                            "flex": 0
+                        },
+                        {
+                            "type": "text",
+                            "text": "$3.50",
+                            "size": "sm",
+                            "color": "#111111",
+                            "align": "end"
+                        }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [{
+                            "type": "text",
+                            "text": "10. Coconut Water (1 glass)",
+                            "size": "sm",
+                            "color": "#555555",
+                            "flex": 0
+                        },
+                        {
+                            "type": "text",
+                            "text": "$4.50",
+                            "size": "sm",
+                            "color": "#111111",
+                            "align": "end"
+                        }
                         ]
                     }
+                    ]
+                },
+                {
+                    "type": "separator",
+                    "margin": "lg"
+                },
+                {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "margin": "lg",
+                    "contents": [{
+                        "type": "text",
+                        "text": "Subtotal",
+                        "size": "md",
+                        "color": "#555555"
+                    },
+                    {
+                        "type": "text",
+                        "text": "$53.00",
+                        "size": "md",
+                        "color": "#111111",
+                        "align": "end"
+                    }
+                    ]
+                },
+                {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [{
+                        "type": "text",
+                        "text": "Service Charge (10%)",
+                        "size": "md",
+                        "color": "#555555"
+                    },
+                    {
+                        "type": "text",
+                        "text": "$5.30",
+                        "size": "md",
+                        "color": "#111111",
+                        "align": "end"
+                    }
+                    ]
+                },
+                {
+                    "type": "separator",
+                    "margin": "lg"
+                },
+                {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "margin": "lg",
+                    "contents": [{
+                        "type": "text",
+                        "text": "Total",
+                        "size": "md",
+                        "weight": "bold"
+                    },
+                    {
+                        "type": "text",
+                        "text": "$58.30",
+                        "size": "md",
+                        "color": "#111111",
+                        "align": "end",
+                        "weight": "bold"
+                    }
+                    ]
+                }
                 ]
             }
         }
@@ -531,74 +531,619 @@ exports.queue = () => {
                     "centerPosition": "50%"
                 },
                 "contents": [{
-                        "type": "text",
-                        "text": "Queue Ticket",
-                        "weight": "bold",
-                        "size": "xl",
-                        "align": "center",
-                        "margin": "md",
-                        "color": "#ffffff"
-                    },
-                    {
-                        "type": "text",
-                        "text": "ร้านหมีล่า",
-                        "weight": "bold",
-                        "size": "lg",
-                        "align": "center",
-                        "margin": "sm",
-                        "color": "#ffffff"
-                    },
-                    {
-                        "type": "text",
-                        "text": "Queue Number",
-                        "weight": "bold",
-                        "size": "md",
-                        "align": "center",
-                        "margin": "lg",
-                        "color": "#ffffff"
-                    },
-                    {
-                        "type": "text",
-                        "text": "A007",
-                        "weight": "bold",
-                        "align": "center",
-                        "color": "#ffffff",
-                        "margin": "md",
-                        "size": "5xl"
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "xl"
-                    },
-                    {
-                        "type": "text",
-                        "text": "Location: 123 Food Street, Bangkok",
-                        "size": "sm",
-                        "color": "#ffffff",
-                        "align": "center",
-                        "margin": "sm"
-                    },
-                    {
-                        "type": "text",
-                        "text": "Date: 2024-08-11",
-                        "size": "sm",
-                        "color": "#ffffff",
-                        "align": "center",
-                        "margin": "xs"
-                    },
-                    {
-                        "type": "text",
-                        "text": "Time: 18:30",
-                        "size": "sm",
-                        "color": "#ffffff",
-                        "align": "center",
-                        "margin": "xs"
-                    }
+                    "type": "text",
+                    "text": "Queue Ticket",
+                    "weight": "bold",
+                    "size": "xl",
+                    "align": "center",
+                    "margin": "md",
+                    "color": "#ffffff"
+                },
+                {
+                    "type": "text",
+                    "text": "ร้านหมีล่า",
+                    "weight": "bold",
+                    "size": "lg",
+                    "align": "center",
+                    "margin": "sm",
+                    "color": "#ffffff"
+                },
+                {
+                    "type": "text",
+                    "text": "Queue Number",
+                    "weight": "bold",
+                    "size": "md",
+                    "align": "center",
+                    "margin": "lg",
+                    "color": "#ffffff"
+                },
+                {
+                    "type": "text",
+                    "text": "A007",
+                    "weight": "bold",
+                    "align": "center",
+                    "color": "#ffffff",
+                    "margin": "md",
+                    "size": "5xl"
+                },
+                {
+                    "type": "separator",
+                    "margin": "xl"
+                },
+                {
+                    "type": "text",
+                    "text": "Location: 123 Food Street, Bangkok",
+                    "size": "sm",
+                    "color": "#ffffff",
+                    "align": "center",
+                    "margin": "sm"
+                },
+                {
+                    "type": "text",
+                    "text": "Date: 2024-08-11",
+                    "size": "sm",
+                    "color": "#ffffff",
+                    "align": "center",
+                    "margin": "xs"
+                },
+                {
+                    "type": "text",
+                    "text": "Time: 18:30",
+                    "size": "sm",
+                    "color": "#ffffff",
+                    "align": "center",
+                    "margin": "xs"
+                }
                 ],
                 "spacing": "md",
                 "paddingAll": "20px",
                 "backgroundColor": "#ffffff",
                 "justifyContent": "center"
+            }
+        }
+    }
+}
+
+exports.transit = () => {
+    return {
+        "type": "flex",
+        "altText": "Flex Message",
+        "contents": {
+            "type": "bubble",
+            "size": "mega",
+            "header": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "FROM",
+                                "color": "#ffffff66",
+                                "size": "sm"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Akihabara",
+                                "color": "#ffffff",
+                                "size": "xl",
+                                "flex": 4,
+                                "weight": "bold"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "TO",
+                                "color": "#ffffff66",
+                                "size": "sm"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Chiang Mai",
+                                "color": "#ffffff",
+                                "size": "xl",
+                                "flex": 4,
+                                "weight": "bold",
+                                "wrap": true
+                            }
+                        ]
+                    }
+                ],
+                "paddingAll": "20px",
+                "backgroundColor": "#0367D3",
+                "spacing": "md",
+                "height": "154px",
+                "paddingTop": "22px"
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "Total: 1 hour",
+                        "color": "#b7b7b7",
+                        "size": "xs"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "20:30",
+                                "size": "sm",
+                                "gravity": "center"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "filler"
+                                    },
+                                    {
+                                        "type": "box",
+                                        "layout": "vertical",
+                                        "contents": [],
+                                        "cornerRadius": "30px",
+                                        "height": "12px",
+                                        "width": "12px",
+                                        "borderColor": "#EF454D",
+                                        "borderWidth": "2px"
+                                    },
+                                    {
+                                        "type": "filler"
+                                    }
+                                ],
+                                "flex": 0
+                            },
+                            {
+                                "type": "text",
+                                "text": "Akihabara",
+                                "gravity": "center",
+                                "flex": 4,
+                                "size": "sm"
+                            }
+                        ],
+                        "spacing": "lg",
+                        "cornerRadius": "30px",
+                        "margin": "xl"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "contents": [
+                                    {
+                                        "type": "filler"
+                                    }
+                                ],
+                                "flex": 1
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "box",
+                                        "layout": "horizontal",
+                                        "contents": [
+                                            {
+                                                "type": "filler"
+                                            },
+                                            {
+                                                "type": "box",
+                                                "layout": "vertical",
+                                                "contents": [],
+                                                "width": "2px",
+                                                "backgroundColor": "#B7B7B7"
+                                            },
+                                            {
+                                                "type": "filler"
+                                            }
+                                        ],
+                                        "flex": 1
+                                    }
+                                ],
+                                "width": "12px"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Walk 4min",
+                                "gravity": "center",
+                                "flex": 4,
+                                "size": "xs",
+                                "color": "#8c8c8c"
+                            }
+                        ],
+                        "spacing": "lg",
+                        "height": "64px"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "20:34",
+                                        "gravity": "center",
+                                        "size": "sm"
+                                    }
+                                ],
+                                "flex": 1
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "filler"
+                                    },
+                                    {
+                                        "type": "box",
+                                        "layout": "vertical",
+                                        "contents": [],
+                                        "cornerRadius": "30px",
+                                        "width": "12px",
+                                        "height": "12px",
+                                        "borderWidth": "2px",
+                                        "borderColor": "#6486E3"
+                                    },
+                                    {
+                                        "type": "filler"
+                                    }
+                                ],
+                                "flex": 0
+                            },
+                            {
+                                "type": "text",
+                                "text": "Ochanomizu",
+                                "gravity": "center",
+                                "flex": 4,
+                                "size": "sm"
+                            }
+                        ],
+                        "spacing": "lg",
+                        "cornerRadius": "30px"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "contents": [
+                                    {
+                                        "type": "filler"
+                                    }
+                                ],
+                                "flex": 1
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "box",
+                                        "layout": "horizontal",
+                                        "contents": [
+                                            {
+                                                "type": "filler"
+                                            },
+                                            {
+                                                "type": "box",
+                                                "layout": "vertical",
+                                                "contents": [],
+                                                "width": "2px",
+                                                "backgroundColor": "#6486E3"
+                                            },
+                                            {
+                                                "type": "filler"
+                                            }
+                                        ],
+                                        "flex": 1
+                                    }
+                                ],
+                                "width": "12px"
+                            },
+                            {
+                                "type": "text",
+                                "text": "Metro 1hr",
+                                "gravity": "center",
+                                "flex": 4,
+                                "size": "xs",
+                                "color": "#8c8c8c"
+                            }
+                        ],
+                        "spacing": "lg",
+                        "height": "64px"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "20:40",
+                                "gravity": "center",
+                                "size": "sm"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "filler"
+                                    },
+                                    {
+                                        "type": "box",
+                                        "layout": "vertical",
+                                        "contents": [],
+                                        "cornerRadius": "30px",
+                                        "width": "12px",
+                                        "height": "12px",
+                                        "borderColor": "#6486E3",
+                                        "borderWidth": "2px"
+                                    },
+                                    {
+                                        "type": "filler"
+                                    }
+                                ],
+                                "flex": 0
+                            },
+                            {
+                                "type": "text",
+                                "text": "Shinjuku",
+                                "gravity": "center",
+                                "flex": 4,
+                                "size": "sm"
+                            }
+                        ],
+                        "spacing": "lg",
+                        "cornerRadius": "30px"
+                    }
+                ]
+            }
+        }
+    }
+}
+
+exports.seven = () => {
+    return {
+        "type": "flex",
+        "altText": "ใบเสร็จ 7-Eleven",
+        "contents": {
+            "type": "bubble",
+            "size": "mega",
+            "hero": {
+                "type": "image",
+                "url": "https://seeklogo.com/images/1/7-eleven-logo-D2E5421D84-seeklogo.com.png",
+                "size": "full",
+                "aspectRatio": "20:10",
+                "aspectMode": "fit"
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "7-ELEVEN",
+                        "weight": "bold",
+                        "size": "lg",
+                        "align": "center",
+                        "color": "#008000"
+                    },
+                    {
+                        "type": "text",
+                        "text": "ใบเสร็จรับเงิน / ใบกำกับภาษีอย่างย่อ",
+                        "weight": "bold",
+                        "size": "md",
+                        "align": "center",
+                        "margin": "md"
+                    },
+                    {
+                        "type": "separator",
+                        "margin": "md"
+                    },
+                    {
+                        "type": "separator",
+                        "margin": "sm"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "sm",
+                        "contents": [
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "2",
+                                        "size": "sm",
+                                        "flex": 1
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "ขนมปังโฮลวีท",
+                                        "size": "sm",
+                                        "flex": 3
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "10.00",
+                                        "size": "sm",
+                                        "flex": 2,
+                                        "align": "end"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "20.00",
+                                        "size": "sm",
+                                        "flex": 2,
+                                        "align": "end"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "1",
+                                        "size": "sm",
+                                        "flex": 1
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "เลย์รสสาหร่าย",
+                                        "size": "sm",
+                                        "flex": 3
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "-",
+                                        "size": "sm",
+                                        "flex": 2,
+                                        "align": "end"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "36.00",
+                                        "size": "sm",
+                                        "flex": 2,
+                                        "align": "end"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "box",
+                                "layout": "horizontal",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "2",
+                                        "size": "sm",
+                                        "flex": 1
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "ถุงกาแฟ",
+                                        "size": "sm",
+                                        "flex": 3
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "22.00",
+                                        "size": "sm",
+                                        "flex": 2,
+                                        "align": "end"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "44.00",
+                                        "size": "sm",
+                                        "flex": 2,
+                                        "align": "end"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "separator",
+                        "margin": "md"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "margin": "md",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "Total",
+                                "size": "md",
+                                "weight": "bold"
+                            },
+                            {
+                                "type": "text",
+                                "text": "213.00",
+                                "size": "md",
+                                "weight": "bold",
+                                "align": "end"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "margin": "sm",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "Cash",
+                                "size": "md"
+                            },
+                            {
+                                "type": "text",
+                                "text": "1000.00",
+                                "size": "md",
+                                "align": "end"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "margin": "sm",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "Change",
+                                "size": "md"
+                            },
+                            {
+                                "type": "text",
+                                "text": "787.00",
+                                "size": "md",
+                                "align": "end"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "ขอบคุณที่ใช้บริการ 7-Eleven",
+                        "size": "sm",
+                        "color": "#888888",
+                        "align": "center"
+                    }
+                ]
             }
         }
     }
@@ -611,767 +1156,767 @@ exports.booking = () => {
         "contents": {
             "type": "carousel",
             "contents": [{
-                    "type": "bubble",
-                    "size": "kilo",
-                    "body": {
+                "type": "bubble",
+                "size": "kilo",
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [{
                         "type": "box",
                         "layout": "vertical",
                         "contents": [{
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "image",
-                                    "url": "https://cdn.loewshotels.com/loewshotels.com-2466770763/cms/cache/v2/5f5a6dfa24c23.jpg/1280x720/fit/80/6527703c22510107c74303e6f757a638.jpg",
-                                    "size": "full",
-                                    "align": "start",
-                                    "aspectMode": "cover"
-                                }],
-                                "offsetTop": "none"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "Deluxe Rooms",
-                                    "weight": "bold",
-                                    "color": "#000000"
-                                }],
-                                "offsetStart": "none",
-                                "offsetTop": "sm"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "baseline",
-                                "contents": [{
-                                        "type": "icon",
-                                        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
-                                        "offsetTop": "sm",
-                                        "offsetStart": "md",
-                                        "size": "sm"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "4.2",
-                                        "size": "xs",
-                                        "margin": "sm",
-                                        "gravity": "top",
-                                        "offsetStart": "md",
-                                        "offsetTop": "sm",
-                                        "color": "#ffffff"
-                                    }
-                                ],
-                                "position": "absolute",
-                                "offsetTop": "20px",
-                                "backgroundColor": "#3E3E3Ecc",
-                                "cornerRadius": "xl",
-                                "width": "55px",
-                                "height": "25px",
-                                "offsetEnd": "20px"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "Discription",
-                                    "size": "sm",
-                                    "weight": "bold",
-                                    "color": "#000000"
-                                }],
-                                "offsetTop": "md"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "Stylish and comfortable, with a nod to the Jet Age, these rooms make the most of natural light and city views.",
-                                    "wrap": true,
-                                    "size": "xxs"
-                                }],
-                                "offsetStart": "none",
-                                "width": "230px",
-                                "offsetTop": "md"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "Facilties",
-                                        "size": "sm",
-                                        "weight": "bold",
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "type": "box",
-                                        "layout": "vertical",
-                                        "contents": []
-                                    }
-                                ],
-                                "offsetTop": "20px"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "box",
-                                    "layout": "horizontal",
-                                    "contents": [{
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                    "type": "text",
-                                                    "text": "Wifi",
-                                                    "size": "xs"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "url": "https://cdn-icons-png.flaticon.com/512/93/93158.png",
-                                                    "size": "16px",
-                                                    "align": "start",
-                                                    "offsetTop": "xs",
-                                                    "offsetStart": "sm"
-                                                }
-                                            ],
-                                            "offsetTop": "xxl",
-                                            "width": "30px"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                    "type": "text",
-                                                    "text": "King bed",
-                                                    "size": "xs"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "url": "https://cdn-icons-png.flaticon.com/512/952/952772.png",
-                                                    "size": "20px",
-                                                    "align": "start",
-                                                    "offsetTop": "xs",
-                                                    "offsetStart": "xl"
-                                                }
-                                            ],
-                                            "offsetTop": "xxl",
-                                            "width": "60px",
-                                            "offsetStart": "md"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                    "type": "text",
-                                                    "text": "Sofa",
-                                                    "size": "xs"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "url": "https://cdn-icons-png.flaticon.com/512/333/333493.png",
-                                                    "size": "24px",
-                                                    "align": "start",
-                                                    "offsetStart": "xs"
-                                                }
-                                            ],
-                                            "offsetTop": "xxl",
-                                            "offsetStart": "xl",
-                                            "width": "50px"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                    "type": "text",
-                                                    "text": "Iron",
-                                                    "size": "xs"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "url": "https://cdn-icons-png.flaticon.com/512/114/114834.png",
-                                                    "size": "28px",
-                                                    "align": "start",
-                                                    "offsetBottom": "sm"
-                                                }
-                                            ],
-                                            "offsetTop": "xxl",
-                                            "offsetStart": "xl"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                "type": "text",
-                                                "text": "+5",
-                                                "offsetTop": "10px",
-                                                "offsetStart": "10px",
-                                                "color": "#ffffff"
-                                            }],
-                                            "backgroundColor": "#000000",
-                                            "width": "40px",
-                                            "height": "40px",
-                                            "cornerRadius": "60px",
-                                            "offsetTop": "xl"
-                                        }
-                                    ],
-                                    "height": "60px"
-                                }]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "Total Price",
-                                    "weight": "bold",
-                                    "size": "sm",
-                                    "color": "#000000"
-                                }],
-                                "offsetTop": "lg"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "120$ / night",
-                                    "offsetTop": "md",
-                                    "weight": "bold",
-                                    "color": "#3F92D8"
-                                }],
-                                "height": "50px",
-                                "offsetTop": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "uri",
-                                    "label": "Book Now",
-                                    "uri": "http://linecorp.com/"
-                                },
-                                "style": "primary",
-                                "color": "#3F92D8"
-                            }
-                        ],
-                        "paddingAll": "0px",
-                        "paddingBottom": "10px",
-                        "paddingStart": "lg",
-                        "paddingEnd": "lg",
-                        "paddingTop": "lg"
-                    }
-                },
-                {
-                    "type": "bubble",
-                    "size": "kilo",
-                    "body": {
+                            "type": "image",
+                            "url": "https://cdn.loewshotels.com/loewshotels.com-2466770763/cms/cache/v2/5f5a6dfa24c23.jpg/1280x720/fit/80/6527703c22510107c74303e6f757a638.jpg",
+                            "size": "full",
+                            "align": "start",
+                            "aspectMode": "cover"
+                        }],
+                        "offsetTop": "none"
+                    },
+                    {
                         "type": "box",
                         "layout": "vertical",
                         "contents": [{
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "image",
-                                    "url": "https://cdn.loewshotels.com/loewshotels.com-2466770763/cms/cache/v2/5cd9b6593b1c7.jpg/1280x720/fit/80/a52a45c417f4ec7ebf0b4f5a72af0433.jpg",
-                                    "size": "full",
-                                    "align": "start",
-                                    "aspectMode": "cover"
-                                }],
-                                "offsetTop": "none"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "Deluxe Rooms",
-                                        "weight": "bold",
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "Only 1 room left!",
-                                        "weight": "bold",
-                                        "color": "#EC1C1C",
-                                        "size": "xs",
-                                        "gravity": "bottom"
-                                    }
-                                ],
-                                "offsetStart": "none",
-                                "offsetTop": "sm"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "baseline",
-                                "contents": [{
-                                        "type": "icon",
-                                        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
-                                        "offsetTop": "sm",
-                                        "offsetStart": "md",
-                                        "size": "sm"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "4.5",
-                                        "size": "xs",
-                                        "margin": "sm",
-                                        "gravity": "top",
-                                        "offsetStart": "md",
-                                        "offsetTop": "sm",
-                                        "color": "#ffffff"
-                                    }
-                                ],
-                                "position": "absolute",
-                                "offsetTop": "20px",
-                                "backgroundColor": "#3E3E3Ecc",
-                                "cornerRadius": "xl",
-                                "width": "55px",
-                                "height": "25px",
-                                "offsetEnd": "20px"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "Discription",
-                                    "size": "sm",
-                                    "weight": "bold",
-                                    "color": "#000000"
-                                }],
-                                "offsetTop": "md"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "Take things up a notch in these rooms on our highest floors with stunning views of Kansas City.",
-                                    "wrap": true,
-                                    "size": "xxs"
-                                }],
-                                "offsetStart": "none",
-                                "width": "230px",
-                                "offsetTop": "md"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "Facilties",
-                                        "size": "sm",
-                                        "weight": "bold",
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "type": "box",
-                                        "layout": "vertical",
-                                        "contents": []
-                                    }
-                                ],
-                                "offsetTop": "20px"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "box",
-                                    "layout": "horizontal",
-                                    "contents": [{
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                    "type": "text",
-                                                    "text": "Wifi",
-                                                    "size": "xs"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "url": "https://cdn-icons-png.flaticon.com/512/93/93158.png",
-                                                    "size": "16px",
-                                                    "align": "start",
-                                                    "offsetTop": "xs",
-                                                    "offsetStart": "sm"
-                                                }
-                                            ],
-                                            "offsetTop": "xxl",
-                                            "width": "30px"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                    "type": "text",
-                                                    "text": "King bed",
-                                                    "size": "xs"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "url": "https://cdn-icons-png.flaticon.com/512/952/952772.png",
-                                                    "size": "20px",
-                                                    "align": "start",
-                                                    "offsetTop": "xs",
-                                                    "offsetStart": "xl"
-                                                }
-                                            ],
-                                            "offsetTop": "xxl",
-                                            "width": "60px",
-                                            "offsetStart": "md"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                    "type": "text",
-                                                    "text": "Sofa",
-                                                    "size": "xs"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "url": "https://cdn-icons-png.flaticon.com/512/333/333493.png",
-                                                    "size": "24px",
-                                                    "align": "start",
-                                                    "offsetStart": "xs"
-                                                }
-                                            ],
-                                            "offsetTop": "xxl",
-                                            "offsetStart": "xl",
-                                            "width": "50px"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                    "type": "text",
-                                                    "text": "Iron",
-                                                    "size": "xs"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "url": "https://cdn-icons-png.flaticon.com/512/114/114834.png",
-                                                    "size": "28px",
-                                                    "align": "start",
-                                                    "offsetBottom": "sm"
-                                                }
-                                            ],
-                                            "offsetTop": "xxl",
-                                            "offsetStart": "xl"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                "type": "text",
-                                                "text": "+8",
-                                                "offsetTop": "10px",
-                                                "offsetStart": "10px",
-                                                "color": "#ffffff"
-                                            }],
-                                            "backgroundColor": "#000000",
-                                            "width": "40px",
-                                            "height": "40px",
-                                            "cornerRadius": "60px",
-                                            "offsetTop": "xl"
-                                        }
-                                    ],
-                                    "height": "60px"
-                                }]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "Total Price",
-                                    "weight": "bold",
-                                    "size": "sm",
-                                    "color": "#000000"
-                                }],
-                                "offsetTop": "lg"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "150$ / night",
-                                    "offsetTop": "md",
-                                    "weight": "bold",
-                                    "color": "#3F92D8"
-                                }],
-                                "height": "50px",
-                                "offsetTop": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "uri",
-                                    "label": "Book Now",
-                                    "uri": "http://linecorp.com/"
-                                },
-                                "style": "primary",
-                                "color": "#3F92D8"
-                            }
+                            "type": "text",
+                            "text": "Deluxe Rooms",
+                            "weight": "bold",
+                            "color": "#000000"
+                        }],
+                        "offsetStart": "none",
+                        "offsetTop": "sm"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "baseline",
+                        "contents": [{
+                            "type": "icon",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                            "offsetTop": "sm",
+                            "offsetStart": "md",
+                            "size": "sm"
+                        },
+                        {
+                            "type": "text",
+                            "text": "4.2",
+                            "size": "xs",
+                            "margin": "sm",
+                            "gravity": "top",
+                            "offsetStart": "md",
+                            "offsetTop": "sm",
+                            "color": "#ffffff"
+                        }
                         ],
-                        "paddingAll": "0px",
-                        "paddingBottom": "10px",
-                        "paddingStart": "lg",
-                        "paddingEnd": "lg",
-                        "paddingTop": "lg"
-                    }
-                },
-                {
-                    "type": "bubble",
-                    "size": "kilo",
-                    "body": {
+                        "position": "absolute",
+                        "offsetTop": "20px",
+                        "backgroundColor": "#3E3E3Ecc",
+                        "cornerRadius": "xl",
+                        "width": "55px",
+                        "height": "25px",
+                        "offsetEnd": "20px"
+                    },
+                    {
                         "type": "box",
                         "layout": "vertical",
                         "contents": [{
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "image",
-                                    "url": "https://cdn.loewshotels.com/loewshotels.com-2466770763/cms/cache/v2/5f5a6e0f69621.jpg/1280x720/fit/80/67847187902c93b863d44388d57b88fe.jpg",
-                                    "size": "full",
-                                    "align": "start",
-                                    "aspectMode": "cover"
-                                }],
-                                "offsetTop": "none"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "Luxury Corner Rooms",
-                                    "weight": "bold",
-                                    "color": "#000000"
-                                }],
-                                "offsetStart": "none",
-                                "offsetTop": "sm"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "baseline",
-                                "contents": [{
-                                        "type": "icon",
-                                        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
-                                        "offsetTop": "sm",
-                                        "offsetStart": "md",
-                                        "size": "sm"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "4.9",
-                                        "size": "xs",
-                                        "margin": "sm",
-                                        "gravity": "top",
-                                        "offsetStart": "md",
-                                        "offsetTop": "sm",
-                                        "color": "#ffffff"
-                                    }
-                                ],
-                                "position": "absolute",
-                                "offsetTop": "20px",
-                                "backgroundColor": "#3E3E3Ecc",
-                                "cornerRadius": "xl",
-                                "width": "55px",
-                                "height": "25px",
-                                "offsetEnd": "20px"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "Discription",
-                                    "size": "sm",
-                                    "weight": "bold",
-                                    "color": "#000000"
-                                }],
-                                "offsetTop": "md"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "Our corner rooms feature a comfortable, contemporary KC-inspired design and give you double the views of Kansas City.",
-                                    "wrap": true,
-                                    "size": "xxs"
-                                }],
-                                "offsetStart": "none",
-                                "width": "230px",
-                                "offsetTop": "md"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "Facilties",
-                                        "size": "sm",
-                                        "weight": "bold",
-                                        "color": "#000000"
-                                    },
-                                    {
-                                        "type": "box",
-                                        "layout": "vertical",
-                                        "contents": []
-                                    }
-                                ],
-                                "offsetTop": "20px"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "box",
-                                    "layout": "horizontal",
-                                    "contents": [{
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                    "type": "text",
-                                                    "text": "Wifi",
-                                                    "size": "xs"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "url": "https://cdn-icons-png.flaticon.com/512/93/93158.png",
-                                                    "size": "16px",
-                                                    "align": "start",
-                                                    "offsetTop": "xs",
-                                                    "offsetStart": "sm"
-                                                }
-                                            ],
-                                            "offsetTop": "xxl",
-                                            "width": "30px"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                    "type": "text",
-                                                    "text": "King bed",
-                                                    "size": "xs"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "url": "https://cdn-icons-png.flaticon.com/512/952/952772.png",
-                                                    "size": "20px",
-                                                    "align": "start",
-                                                    "offsetTop": "xs",
-                                                    "offsetStart": "xl"
-                                                }
-                                            ],
-                                            "offsetTop": "xxl",
-                                            "width": "60px",
-                                            "offsetStart": "md"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                    "type": "text",
-                                                    "text": "Sofa",
-                                                    "size": "xs"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "url": "https://cdn-icons-png.flaticon.com/512/333/333493.png",
-                                                    "size": "24px",
-                                                    "align": "start",
-                                                    "offsetStart": "xs"
-                                                }
-                                            ],
-                                            "offsetTop": "xxl",
-                                            "offsetStart": "xl",
-                                            "width": "50px"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                    "type": "text",
-                                                    "text": "Iron",
-                                                    "size": "xs"
-                                                },
-                                                {
-                                                    "type": "image",
-                                                    "url": "https://cdn-icons-png.flaticon.com/512/114/114834.png",
-                                                    "size": "28px",
-                                                    "align": "start",
-                                                    "offsetBottom": "sm"
-                                                }
-                                            ],
-                                            "offsetTop": "xxl",
-                                            "offsetStart": "xl"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [{
-                                                "type": "text",
-                                                "text": "+12",
-                                                "offsetTop": "10px",
-                                                "offsetStart": "sm",
-                                                "color": "#ffffff"
-                                            }],
-                                            "backgroundColor": "#000000",
-                                            "width": "40px",
-                                            "height": "40px",
-                                            "cornerRadius": "60px",
-                                            "offsetTop": "xl"
-                                        }
-                                    ],
-                                    "height": "60px"
-                                }]
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "Total Price",
-                                    "weight": "bold",
-                                    "size": "sm",
-                                    "color": "#000000"
-                                }],
-                                "offsetTop": "lg"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [{
-                                    "type": "text",
-                                    "text": "180$ / night",
-                                    "offsetTop": "md",
-                                    "weight": "bold",
-                                    "color": "#3F92D8"
-                                }],
-                                "height": "50px",
-                                "offsetTop": "sm"
-                            },
-                            {
-                                "type": "button",
-                                "action": {
-                                    "type": "uri",
-                                    "label": "Book Now",
-                                    "uri": "http://linecorp.com/"
-                                },
-                                "style": "primary",
-                                "color": "#3F92D8"
-                            }
+                            "type": "text",
+                            "text": "Discription",
+                            "size": "sm",
+                            "weight": "bold",
+                            "color": "#000000"
+                        }],
+                        "offsetTop": "md"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "Stylish and comfortable, with a nod to the Jet Age, these rooms make the most of natural light and city views.",
+                            "wrap": true,
+                            "size": "xxs"
+                        }],
+                        "offsetStart": "none",
+                        "width": "230px",
+                        "offsetTop": "md"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "Facilties",
+                            "size": "sm",
+                            "weight": "bold",
+                            "color": "#000000"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": []
+                        }
                         ],
-                        "paddingAll": "0px",
-                        "paddingBottom": "10px",
-                        "paddingStart": "lg",
-                        "paddingEnd": "lg",
-                        "paddingTop": "lg"
+                        "offsetTop": "20px"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [{
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "Wifi",
+                                    "size": "xs"
+                                },
+                                {
+                                    "type": "image",
+                                    "url": "https://cdn-icons-png.flaticon.com/512/93/93158.png",
+                                    "size": "16px",
+                                    "align": "start",
+                                    "offsetTop": "xs",
+                                    "offsetStart": "sm"
+                                }
+                                ],
+                                "offsetTop": "xxl",
+                                "width": "30px"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "King bed",
+                                    "size": "xs"
+                                },
+                                {
+                                    "type": "image",
+                                    "url": "https://cdn-icons-png.flaticon.com/512/952/952772.png",
+                                    "size": "20px",
+                                    "align": "start",
+                                    "offsetTop": "xs",
+                                    "offsetStart": "xl"
+                                }
+                                ],
+                                "offsetTop": "xxl",
+                                "width": "60px",
+                                "offsetStart": "md"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "Sofa",
+                                    "size": "xs"
+                                },
+                                {
+                                    "type": "image",
+                                    "url": "https://cdn-icons-png.flaticon.com/512/333/333493.png",
+                                    "size": "24px",
+                                    "align": "start",
+                                    "offsetStart": "xs"
+                                }
+                                ],
+                                "offsetTop": "xxl",
+                                "offsetStart": "xl",
+                                "width": "50px"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "Iron",
+                                    "size": "xs"
+                                },
+                                {
+                                    "type": "image",
+                                    "url": "https://cdn-icons-png.flaticon.com/512/114/114834.png",
+                                    "size": "28px",
+                                    "align": "start",
+                                    "offsetBottom": "sm"
+                                }
+                                ],
+                                "offsetTop": "xxl",
+                                "offsetStart": "xl"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "+5",
+                                    "offsetTop": "10px",
+                                    "offsetStart": "10px",
+                                    "color": "#ffffff"
+                                }],
+                                "backgroundColor": "#000000",
+                                "width": "40px",
+                                "height": "40px",
+                                "cornerRadius": "60px",
+                                "offsetTop": "xl"
+                            }
+                            ],
+                            "height": "60px"
+                        }]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "Total Price",
+                            "weight": "bold",
+                            "size": "sm",
+                            "color": "#000000"
+                        }],
+                        "offsetTop": "lg"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "120$ / night",
+                            "offsetTop": "md",
+                            "weight": "bold",
+                            "color": "#3F92D8"
+                        }],
+                        "height": "50px",
+                        "offsetTop": "sm"
+                    },
+                    {
+                        "type": "button",
+                        "action": {
+                            "type": "uri",
+                            "label": "Book Now",
+                            "uri": "http://linecorp.com/"
+                        },
+                        "style": "primary",
+                        "color": "#3F92D8"
                     }
+                    ],
+                    "paddingAll": "0px",
+                    "paddingBottom": "10px",
+                    "paddingStart": "lg",
+                    "paddingEnd": "lg",
+                    "paddingTop": "lg"
                 }
+            },
+            {
+                "type": "bubble",
+                "size": "kilo",
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [{
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "image",
+                            "url": "https://cdn.loewshotels.com/loewshotels.com-2466770763/cms/cache/v2/5cd9b6593b1c7.jpg/1280x720/fit/80/a52a45c417f4ec7ebf0b4f5a72af0433.jpg",
+                            "size": "full",
+                            "align": "start",
+                            "aspectMode": "cover"
+                        }],
+                        "offsetTop": "none"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [{
+                            "type": "text",
+                            "text": "Deluxe Rooms",
+                            "weight": "bold",
+                            "color": "#000000"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Only 1 room left!",
+                            "weight": "bold",
+                            "color": "#EC1C1C",
+                            "size": "xs",
+                            "gravity": "bottom"
+                        }
+                        ],
+                        "offsetStart": "none",
+                        "offsetTop": "sm"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "baseline",
+                        "contents": [{
+                            "type": "icon",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                            "offsetTop": "sm",
+                            "offsetStart": "md",
+                            "size": "sm"
+                        },
+                        {
+                            "type": "text",
+                            "text": "4.5",
+                            "size": "xs",
+                            "margin": "sm",
+                            "gravity": "top",
+                            "offsetStart": "md",
+                            "offsetTop": "sm",
+                            "color": "#ffffff"
+                        }
+                        ],
+                        "position": "absolute",
+                        "offsetTop": "20px",
+                        "backgroundColor": "#3E3E3Ecc",
+                        "cornerRadius": "xl",
+                        "width": "55px",
+                        "height": "25px",
+                        "offsetEnd": "20px"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "Discription",
+                            "size": "sm",
+                            "weight": "bold",
+                            "color": "#000000"
+                        }],
+                        "offsetTop": "md"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "Take things up a notch in these rooms on our highest floors with stunning views of Kansas City.",
+                            "wrap": true,
+                            "size": "xxs"
+                        }],
+                        "offsetStart": "none",
+                        "width": "230px",
+                        "offsetTop": "md"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "Facilties",
+                            "size": "sm",
+                            "weight": "bold",
+                            "color": "#000000"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": []
+                        }
+                        ],
+                        "offsetTop": "20px"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [{
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "Wifi",
+                                    "size": "xs"
+                                },
+                                {
+                                    "type": "image",
+                                    "url": "https://cdn-icons-png.flaticon.com/512/93/93158.png",
+                                    "size": "16px",
+                                    "align": "start",
+                                    "offsetTop": "xs",
+                                    "offsetStart": "sm"
+                                }
+                                ],
+                                "offsetTop": "xxl",
+                                "width": "30px"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "King bed",
+                                    "size": "xs"
+                                },
+                                {
+                                    "type": "image",
+                                    "url": "https://cdn-icons-png.flaticon.com/512/952/952772.png",
+                                    "size": "20px",
+                                    "align": "start",
+                                    "offsetTop": "xs",
+                                    "offsetStart": "xl"
+                                }
+                                ],
+                                "offsetTop": "xxl",
+                                "width": "60px",
+                                "offsetStart": "md"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "Sofa",
+                                    "size": "xs"
+                                },
+                                {
+                                    "type": "image",
+                                    "url": "https://cdn-icons-png.flaticon.com/512/333/333493.png",
+                                    "size": "24px",
+                                    "align": "start",
+                                    "offsetStart": "xs"
+                                }
+                                ],
+                                "offsetTop": "xxl",
+                                "offsetStart": "xl",
+                                "width": "50px"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "Iron",
+                                    "size": "xs"
+                                },
+                                {
+                                    "type": "image",
+                                    "url": "https://cdn-icons-png.flaticon.com/512/114/114834.png",
+                                    "size": "28px",
+                                    "align": "start",
+                                    "offsetBottom": "sm"
+                                }
+                                ],
+                                "offsetTop": "xxl",
+                                "offsetStart": "xl"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "+8",
+                                    "offsetTop": "10px",
+                                    "offsetStart": "10px",
+                                    "color": "#ffffff"
+                                }],
+                                "backgroundColor": "#000000",
+                                "width": "40px",
+                                "height": "40px",
+                                "cornerRadius": "60px",
+                                "offsetTop": "xl"
+                            }
+                            ],
+                            "height": "60px"
+                        }]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "Total Price",
+                            "weight": "bold",
+                            "size": "sm",
+                            "color": "#000000"
+                        }],
+                        "offsetTop": "lg"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "150$ / night",
+                            "offsetTop": "md",
+                            "weight": "bold",
+                            "color": "#3F92D8"
+                        }],
+                        "height": "50px",
+                        "offsetTop": "sm"
+                    },
+                    {
+                        "type": "button",
+                        "action": {
+                            "type": "uri",
+                            "label": "Book Now",
+                            "uri": "http://linecorp.com/"
+                        },
+                        "style": "primary",
+                        "color": "#3F92D8"
+                    }
+                    ],
+                    "paddingAll": "0px",
+                    "paddingBottom": "10px",
+                    "paddingStart": "lg",
+                    "paddingEnd": "lg",
+                    "paddingTop": "lg"
+                }
+            },
+            {
+                "type": "bubble",
+                "size": "kilo",
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [{
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "image",
+                            "url": "https://cdn.loewshotels.com/loewshotels.com-2466770763/cms/cache/v2/5f5a6e0f69621.jpg/1280x720/fit/80/67847187902c93b863d44388d57b88fe.jpg",
+                            "size": "full",
+                            "align": "start",
+                            "aspectMode": "cover"
+                        }],
+                        "offsetTop": "none"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "Luxury Corner Rooms",
+                            "weight": "bold",
+                            "color": "#000000"
+                        }],
+                        "offsetStart": "none",
+                        "offsetTop": "sm"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "baseline",
+                        "contents": [{
+                            "type": "icon",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                            "offsetTop": "sm",
+                            "offsetStart": "md",
+                            "size": "sm"
+                        },
+                        {
+                            "type": "text",
+                            "text": "4.9",
+                            "size": "xs",
+                            "margin": "sm",
+                            "gravity": "top",
+                            "offsetStart": "md",
+                            "offsetTop": "sm",
+                            "color": "#ffffff"
+                        }
+                        ],
+                        "position": "absolute",
+                        "offsetTop": "20px",
+                        "backgroundColor": "#3E3E3Ecc",
+                        "cornerRadius": "xl",
+                        "width": "55px",
+                        "height": "25px",
+                        "offsetEnd": "20px"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "Discription",
+                            "size": "sm",
+                            "weight": "bold",
+                            "color": "#000000"
+                        }],
+                        "offsetTop": "md"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "Our corner rooms feature a comfortable, contemporary KC-inspired design and give you double the views of Kansas City.",
+                            "wrap": true,
+                            "size": "xxs"
+                        }],
+                        "offsetStart": "none",
+                        "width": "230px",
+                        "offsetTop": "md"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "Facilties",
+                            "size": "sm",
+                            "weight": "bold",
+                            "color": "#000000"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": []
+                        }
+                        ],
+                        "offsetTop": "20px"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [{
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "Wifi",
+                                    "size": "xs"
+                                },
+                                {
+                                    "type": "image",
+                                    "url": "https://cdn-icons-png.flaticon.com/512/93/93158.png",
+                                    "size": "16px",
+                                    "align": "start",
+                                    "offsetTop": "xs",
+                                    "offsetStart": "sm"
+                                }
+                                ],
+                                "offsetTop": "xxl",
+                                "width": "30px"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "King bed",
+                                    "size": "xs"
+                                },
+                                {
+                                    "type": "image",
+                                    "url": "https://cdn-icons-png.flaticon.com/512/952/952772.png",
+                                    "size": "20px",
+                                    "align": "start",
+                                    "offsetTop": "xs",
+                                    "offsetStart": "xl"
+                                }
+                                ],
+                                "offsetTop": "xxl",
+                                "width": "60px",
+                                "offsetStart": "md"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "Sofa",
+                                    "size": "xs"
+                                },
+                                {
+                                    "type": "image",
+                                    "url": "https://cdn-icons-png.flaticon.com/512/333/333493.png",
+                                    "size": "24px",
+                                    "align": "start",
+                                    "offsetStart": "xs"
+                                }
+                                ],
+                                "offsetTop": "xxl",
+                                "offsetStart": "xl",
+                                "width": "50px"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "Iron",
+                                    "size": "xs"
+                                },
+                                {
+                                    "type": "image",
+                                    "url": "https://cdn-icons-png.flaticon.com/512/114/114834.png",
+                                    "size": "28px",
+                                    "align": "start",
+                                    "offsetBottom": "sm"
+                                }
+                                ],
+                                "offsetTop": "xxl",
+                                "offsetStart": "xl"
+                            },
+                            {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [{
+                                    "type": "text",
+                                    "text": "+12",
+                                    "offsetTop": "10px",
+                                    "offsetStart": "sm",
+                                    "color": "#ffffff"
+                                }],
+                                "backgroundColor": "#000000",
+                                "width": "40px",
+                                "height": "40px",
+                                "cornerRadius": "60px",
+                                "offsetTop": "xl"
+                            }
+                            ],
+                            "height": "60px"
+                        }]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "Total Price",
+                            "weight": "bold",
+                            "size": "sm",
+                            "color": "#000000"
+                        }],
+                        "offsetTop": "lg"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [{
+                            "type": "text",
+                            "text": "180$ / night",
+                            "offsetTop": "md",
+                            "weight": "bold",
+                            "color": "#3F92D8"
+                        }],
+                        "height": "50px",
+                        "offsetTop": "sm"
+                    },
+                    {
+                        "type": "button",
+                        "action": {
+                            "type": "uri",
+                            "label": "Book Now",
+                            "uri": "http://linecorp.com/"
+                        },
+                        "style": "primary",
+                        "color": "#3F92D8"
+                    }
+                    ],
+                    "paddingAll": "0px",
+                    "paddingBottom": "10px",
+                    "paddingStart": "lg",
+                    "paddingEnd": "lg",
+                    "paddingTop": "lg"
+                }
+            }
             ]
         }
     }
@@ -1388,166 +1933,166 @@ exports.report = () => {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [{
-                        "type": "text",
-                        "text": "Sales Report",
-                        "weight": "bold",
-                        "color": "#1DB446",
-                        "size": "xl"
-                    },
-                    {
-                        "type": "text",
-                        "text": "January - June 2024",
-                        "size": "sm",
-                        "color": "#AAAAAA"
-                    }
+                    "type": "text",
+                    "text": "Sales Report",
+                    "weight": "bold",
+                    "color": "#1DB446",
+                    "size": "xl"
+                },
+                {
+                    "type": "text",
+                    "text": "January - June 2024",
+                    "size": "sm",
+                    "color": "#AAAAAA"
+                }
                 ]
             },
             "body": {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [{
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [{
+                        "type": "text",
+                        "text": "Month",
+                        "weight": "bold",
+                        "color": "#555555",
+                        "size": "sm"
+                    },
+                    {
+                        "type": "text",
+                        "text": "Sales",
+                        "weight": "bold",
+                        "color": "#555555",
+                        "size": "sm",
+                        "align": "end"
+                    }
+                    ]
+                },
+                {
+                    "type": "separator",
+                    "margin": "sm"
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [{
                         "type": "box",
                         "layout": "horizontal",
                         "contents": [{
-                                "type": "text",
-                                "text": "Month",
-                                "weight": "bold",
-                                "color": "#555555",
-                                "size": "sm"
-                            },
-                            {
-                                "type": "text",
-                                "text": "Sales",
-                                "weight": "bold",
-                                "color": "#555555",
-                                "size": "sm",
-                                "align": "end"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "separator",
+                            "type": "text",
+                            "text": "January",
+                            "size": "md",
+                            "color": "#555555"
+                        },
+                        {
+                            "type": "text",
+                            "text": "฿10,000",
+                            "size": "md",
+                            "color": "#111111",
+                            "align": "end"
+                        }
+                        ],
                         "margin": "sm"
                     },
                     {
                         "type": "box",
-                        "layout": "vertical",
+                        "layout": "horizontal",
                         "contents": [{
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "January",
-                                        "size": "md",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "฿10,000",
-                                        "size": "md",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ],
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "February",
-                                        "size": "md",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "฿8,500",
-                                        "size": "md",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ],
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "March",
-                                        "size": "md",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "฿12,000",
-                                        "size": "md",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ],
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "April",
-                                        "size": "md",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "฿9,000",
-                                        "size": "md",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ],
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "May",
-                                        "size": "md",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "฿7,500",
-                                        "size": "md",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ],
-                                "margin": "sm"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [{
-                                        "type": "text",
-                                        "text": "June",
-                                        "size": "md",
-                                        "color": "#555555"
-                                    },
-                                    {
-                                        "type": "text",
-                                        "text": "฿11,000",
-                                        "size": "md",
-                                        "color": "#111111",
-                                        "align": "end"
-                                    }
-                                ],
-                                "margin": "sm"
-                            }
-                        ]
+                            "type": "text",
+                            "text": "February",
+                            "size": "md",
+                            "color": "#555555"
+                        },
+                        {
+                            "type": "text",
+                            "text": "฿8,500",
+                            "size": "md",
+                            "color": "#111111",
+                            "align": "end"
+                        }
+                        ],
+                        "margin": "sm"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [{
+                            "type": "text",
+                            "text": "March",
+                            "size": "md",
+                            "color": "#555555"
+                        },
+                        {
+                            "type": "text",
+                            "text": "฿12,000",
+                            "size": "md",
+                            "color": "#111111",
+                            "align": "end"
+                        }
+                        ],
+                        "margin": "sm"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [{
+                            "type": "text",
+                            "text": "April",
+                            "size": "md",
+                            "color": "#555555"
+                        },
+                        {
+                            "type": "text",
+                            "text": "฿9,000",
+                            "size": "md",
+                            "color": "#111111",
+                            "align": "end"
+                        }
+                        ],
+                        "margin": "sm"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [{
+                            "type": "text",
+                            "text": "May",
+                            "size": "md",
+                            "color": "#555555"
+                        },
+                        {
+                            "type": "text",
+                            "text": "฿7,500",
+                            "size": "md",
+                            "color": "#111111",
+                            "align": "end"
+                        }
+                        ],
+                        "margin": "sm"
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [{
+                            "type": "text",
+                            "text": "June",
+                            "size": "md",
+                            "color": "#555555"
+                        },
+                        {
+                            "type": "text",
+                            "text": "฿11,000",
+                            "size": "md",
+                            "color": "#111111",
+                            "align": "end"
+                        }
+                        ],
+                        "margin": "sm"
                     }
+                    ]
+                }
                 ]
             }
         }
@@ -1631,18 +2176,18 @@ exports.chartBar = (chartUrl) => {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [{
-                        "type": "text",
-                        "text": "Sales Report",
-                        "weight": "bold",
-                        "color": "#1DB446",
-                        "size": "xl"
-                    },
-                    {
-                        "type": "text",
-                        "text": "August 2024",
-                        "size": "sm",
-                        "color": "#AAAAAA"
-                    }
+                    "type": "text",
+                    "text": "Sales Report",
+                    "weight": "bold",
+                    "color": "#1DB446",
+                    "size": "xl"
+                },
+                {
+                    "type": "text",
+                    "text": "August 2024",
+                    "size": "sm",
+                    "color": "#AAAAAA"
+                }
                 ]
             },
             "hero": {
@@ -1657,69 +2202,69 @@ exports.chartBar = (chartUrl) => {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [{
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [{
-                                "type": "text",
-                                "text": "Total Sales",
-                                "size": "md",
-                                "color": "#555555"
-                            },
-                            {
-                                "type": "text",
-                                "text": "฿50,000",
-                                "size": "md",
-                                "color": "#111111",
-                                "align": "end"
-                            }
-                        ]
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [{
+                        "type": "text",
+                        "text": "Total Sales",
+                        "size": "md",
+                        "color": "#555555"
                     },
                     {
-                        "type": "separator",
-                        "margin": "md"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [{
-                                "type": "text",
-                                "text": "Best Seller",
-                                "size": "md",
-                                "color": "#555555"
-                            },
-                            {
-                                "type": "text",
-                                "text": "Product A",
-                                "size": "md",
-                                "color": "#111111",
-                                "align": "end"
-                            }
-                        ],
-                        "margin": "md"
-                    },
-                    {
-                        "type": "separator",
-                        "margin": "md"
-                    },
-                    {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [{
-                                "type": "text",
-                                "text": "Average Transaction Value",
-                                "size": "md",
-                                "color": "#555555"
-                            },
-                            {
-                                "type": "text",
-                                "text": "฿416.67",
-                                "size": "md",
-                                "color": "#111111",
-                                "align": "end"
-                            }
-                        ],
-                        "margin": "md"
+                        "type": "text",
+                        "text": "฿50,000",
+                        "size": "md",
+                        "color": "#111111",
+                        "align": "end"
                     }
+                    ]
+                },
+                {
+                    "type": "separator",
+                    "margin": "md"
+                },
+                {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [{
+                        "type": "text",
+                        "text": "Best Seller",
+                        "size": "md",
+                        "color": "#555555"
+                    },
+                    {
+                        "type": "text",
+                        "text": "Product A",
+                        "size": "md",
+                        "color": "#111111",
+                        "align": "end"
+                    }
+                    ],
+                    "margin": "md"
+                },
+                {
+                    "type": "separator",
+                    "margin": "md"
+                },
+                {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [{
+                        "type": "text",
+                        "text": "Average Transaction Value",
+                        "size": "md",
+                        "color": "#555555"
+                    },
+                    {
+                        "type": "text",
+                        "text": "฿416.67",
+                        "size": "md",
+                        "color": "#111111",
+                        "align": "end"
+                    }
+                    ],
+                    "margin": "md"
+                }
                 ]
             }
         }
@@ -1739,112 +2284,112 @@ exports.foodBill = (order, uuid) => {
                 type: "box",
                 layout: "vertical",
                 contents: [{
-                        type: "text",
-                        text: "Thai Delight Restaurant",
-                        weight: "bold",
-                        size: "xl"
-                    },
-                    {
-                        type: "text",
-                        text: "123 Bangkok St, Bangkok, Thailand",
-                        size: "sm",
-                        color: "#aaaaaa"
-                    },
-                    {
-                        type: "text",
-                        text: "Tel: +66 2 123 4567",
-                        size: "sm",
-                        color: "#aaaaaa"
-                    },
-                    {
-                        type: "text",
-                        text: `Order Id : ${uuid}`,
-                        size: "sm",
-                        color: "#aaaaaa"
-                    }
+                    type: "text",
+                    text: "Thai Delight Restaurant",
+                    weight: "bold",
+                    size: "xl"
+                },
+                {
+                    type: "text",
+                    text: "123 Bangkok St, Bangkok, Thailand",
+                    size: "sm",
+                    color: "#aaaaaa"
+                },
+                {
+                    type: "text",
+                    text: "Tel: +66 2 123 4567",
+                    size: "sm",
+                    color: "#aaaaaa"
+                },
+                {
+                    type: "text",
+                    text: `Order Id : ${uuid}`,
+                    size: "sm",
+                    color: "#aaaaaa"
+                }
                 ]
             },
             body: {
                 type: "box",
                 layout: "vertical",
                 contents: [{
-                        type: "text",
-                        text: "Food Bill",
-                        weight: "bold",
-                        size: "xl"
-                    },
-                    {
-                        type: "separator",
-                        margin: "md"
-                    },
-                    {
-                        type: "box",
-                        layout: "vertical",
-                        margin: "lg",
-                        spacing: "sm",
-                        contents: order.items.map((item, index) => ({
-                            type: "box",
-                            layout: "horizontal",
-                            contents: [{
-                                    type: "text",
-                                    text: `${index + 1}. ${item.name}`,
-                                    size: "sm",
-                                    color: "#555555",
-                                    flex: 0
-                                },
-                                {
-                                    type: "text",
-                                    text: `${item.price} ฿`,
-                                    size: "sm",
-                                    color: "#111111",
-                                    align: "end"
-                                }
-                            ]
-                        }))
-                    },
-                    {
-                        type: "separator",
-                        margin: "lg"
-                    },
-                    {
+                    type: "text",
+                    text: "Food Bill",
+                    weight: "bold",
+                    size: "xl"
+                },
+                {
+                    type: "separator",
+                    margin: "md"
+                },
+                {
+                    type: "box",
+                    layout: "vertical",
+                    margin: "lg",
+                    spacing: "sm",
+                    contents: order.items.map((item, index) => ({
                         type: "box",
                         layout: "horizontal",
-                        margin: "lg",
                         contents: [{
-                                type: "text",
-                                text: "Total",
-                                size: "md",
-                                weight: "bold"
-                            },
-                            {
-                                type: "text",
-                                text: `${order.total} ฿`,
-                                size: "md",
-                                color: "#111111",
-                                align: "end",
-                                weight: "bold"
-                            }
+                            type: "text",
+                            text: `${index + 1}. ${item.name}`,
+                            size: "sm",
+                            color: "#555555",
+                            flex: 0
+                        },
+                        {
+                            type: "text",
+                            text: `${item.price} ฿`,
+                            size: "sm",
+                            color: "#111111",
+                            align: "end"
+                        }
                         ]
+                    }))
+                },
+                {
+                    type: "separator",
+                    margin: "lg"
+                },
+                {
+                    type: "box",
+                    layout: "horizontal",
+                    margin: "lg",
+                    contents: [{
+                        type: "text",
+                        text: "Total",
+                        size: "md",
+                        weight: "bold"
                     },
                     {
-                        type: "separator",
-                        margin: "xl"
-                    },
-                    {
-                        type: "box",
-                        layout: "vertical",
-                        contents: [{
-                                type: "text",
-                                text: "QR Payment",
-                                align: "center"
-                            },
-                            {
-                                type: "image",
-                                url: "https://developers-resource.landpress.line.me/fx/img/linecorp_code_withborder.png"
-                            }
-                        ],
-                        margin: "xl"
+                        type: "text",
+                        text: `${order.total} ฿`,
+                        size: "md",
+                        color: "#111111",
+                        align: "end",
+                        weight: "bold"
                     }
+                    ]
+                },
+                {
+                    type: "separator",
+                    margin: "xl"
+                },
+                {
+                    type: "box",
+                    layout: "vertical",
+                    contents: [{
+                        type: "text",
+                        text: "QR Payment",
+                        align: "center"
+                    },
+                    {
+                        type: "image",
+                        url: "https://developers-resource.landpress.line.me/fx/img/linecorp_code_withborder.png"
+                    }
+                    ],
+                    margin: "xl"
+                }
                 ]
             }
         }

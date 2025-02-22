@@ -198,7 +198,7 @@ exports.isAnimationLoading = async (userId) => {
         const url = `${process.env.LINE_MESSAGING_API}/chat/loading/start`;
         const response = await axios.post(url, {
             "chatId": `${userId}`,
-            "loadingSeconds": 10 // The default value is 20.
+            "loadingSeconds": 10 // The default value is 20. // max 60 seconds
             // Number of seconds to display a loading animation. You can specify a any one of 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, or 60.
         }, {
             headers: {
@@ -493,7 +493,7 @@ Get number of followers
 https://developers.line.biz/en/reference/messaging-api/#get-number-of-followers
 */
 async function getNumberOfFollowers(accessToken) {
-   const currentDate = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+    const currentDate = new Date().toISOString().slice(0, 10).replace(/-/g, '');
     const url = `${process.env.LINE_MESSAGING_API}/insight/followers?date=${currentDate}`;
     const response = await axios.get(url, {
         headers: {
@@ -549,43 +549,43 @@ async function issueTokenv2_1() {
 
     // Signing key and payload for JWT
     const LINE_SIGNING_KEY = {
-      alg: "RS256",
-      typ: "JWT",
-      kid: process.env.ASSERTION_SIGNING_KEY,
+        alg: "RS256",
+        typ: "JWT",
+        kid: process.env.ASSERTION_SIGNING_KEY,
     };
 
     const payload = {
-      iss: process.env.LINE_MESSAGING_CHANNEL_ID,
-      sub: process.env.LINE_MESSAGING_CHANNEL_ID,
-      aud: "https://api.line.me/",
-      exp: Math.floor(Date.now() / 1000) + 1800, // 30 minutes expiration
-      token_exp: 2592000, // 30 days expiration
+        iss: process.env.LINE_MESSAGING_CHANNEL_ID,
+        sub: process.env.LINE_MESSAGING_CHANNEL_ID,
+        aud: "https://api.line.me/",
+        exp: Math.floor(Date.now() / 1000) + 1800, // 30 minutes expiration
+        token_exp: 2592000, // 30 days expiration
     };
-  
+
     // Create signed JWT
     const clientAssertion = await jose.JWS.createSign({ format: "compact", fields: LINE_SIGNING_KEY }, jwk)
-      .update(JSON.stringify(payload))
-      .final();
-  
+        .update(JSON.stringify(payload))
+        .final();
+
     // Prepare data for POST request
     const data = new URLSearchParams({
         grant_type: 'client_credentials',
         client_assertion_type: 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer',
         client_assertion: clientAssertion
-      });
-  
-      // Axios config for issuing token
-      const response = await axios.post(process.env.LINE_MESSAGING_OAUTH_ISSUE_TOKENV2, data, {
+    });
+
+    // Axios config for issuing token
+    const response = await axios.post(process.env.LINE_MESSAGING_OAUTH_ISSUE_TOKENV2, data, {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      });
-  
-      // Return access token or throw error if missing
-      if (response.status === 200 && response.data?.access_token) {
+    });
+
+    // Return access token or throw error if missing
+    if (response.status === 200 && response.data?.access_token) {
         return response.data.access_token;
-      } else {
+    } else {
         throw new Error('Failed to obtain access token.');
-      }
-  }
+    }
+}
 
 /*
 

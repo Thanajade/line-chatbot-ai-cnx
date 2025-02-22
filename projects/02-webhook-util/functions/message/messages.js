@@ -8,56 +8,56 @@ exports.welcomeMessage = (profile) => {
         },
         "quickReply": {
             "items": [{
-                    "type": "action",
-                    "action": {
-                        "type": "message",
-                        "label": "Yes",
-                        "text": "Yes"
-                    }
-                },
-                {
-                    "type": "action",
-                    "action": {
-                        "type": "uri",
-                        "label": "Phone order",
-                        "uri": "tel:09001234567"
-                    }
-                },
-                {
-                    "type": "action",
-                    "action": {
-                        "type": "datetimepicker",
-                        "label": "Select date",
-                        "data": "storeId=12345",
-                        "mode": "date",
-                        "initial": "2024-08-25",
-                        "min": "2024-08-01",
-                        "max": "2024-12-31"
-                      }
-                      
-                },
-                {
-                    "type": "action",
-                    "action": {
-                        "type": "clipboard",
-                        "label": "Copy",
-                        "clipboardText": "3B48740B"
-                    }
-                },
-                {
-                    "type": "action",
-                    "action": {
-                        "type": "cameraRoll",
-                        "label": "Send photo"
-                    }
-                },
-                {
-                    "type": "action",
-                    "action": {
-                        "type": "camera",
-                        "label": "Open camera"
-                    }
+                "type": "action",
+                "action": {
+                    "type": "message",
+                    "label": "Yes",
+                    "text": "Yes"
                 }
+            },
+            {
+                "type": "action",
+                "action": {
+                    "type": "uri",
+                    "label": "Phone order",
+                    "uri": "tel:09001234567"
+                }
+            },
+            {
+                "type": "action",
+                "action": {
+                    "type": "datetimepicker",
+                    "label": "Select date",
+                    "data": "storeId=12345", // includes data into reply message, can be json
+                    "mode": "date",
+                    "initial": "2024-08-25",
+                    "min": "2024-08-01",
+                    "max": "2024-12-31"
+                }
+
+            },
+            {
+                "type": "action",
+                "action": {
+                    "type": "clipboard",
+                    "label": "Copy",
+                    "clipboardText": "3B48740B"
+                }
+            },
+            {
+                "type": "action",
+                "action": {
+                    "type": "cameraRoll",
+                    "label": "Send photo"
+                }
+            },
+            {
+                "type": "action",
+                "action": {
+                    "type": "camera",
+                    "label": "Open camera"
+                }
+            }
             ]
         }
     }
@@ -72,56 +72,56 @@ exports.welcomeBack = (profile) => {
         },
         "quickReply": {
             "items": [{
-                    "type": "action",
-                    "action": {
-                        "type": "message",
-                        "label": "Yes",
-                        "text": "Yes"
-                    }
-                },
-                {
-                    "type": "action",
-                    "action": {
-                        "type": "uri",
-                        "label": "Phone order",
-                        "uri": "tel:09001234567"
-                    }
-                },
-                {
-                    "type": "action",
-                    "action": {
-                        "type": "clipboard",
-                        "label": "Copy",
-                        "clipboardText": "3B48740B"
-                    }
-                },
-                {
-                    "type": "action",
-                    "action": {
-                        "type": "datetimepicker",
-                        "label": "Select date",
-                        "data": "storeId=12345",
-                        "mode": "date",
-                        "initial": "2024-08-25",
-                        "min": "2024-08-01",
-                        "max": "2024-12-31"
-                      }
-                      
-                },
-                {
-                    "type": "action",
-                    "action": {
-                        "type": "cameraRoll",
-                        "label": "Send photo"
-                    }
-                },
-                {
-                    "type": "action",
-                    "action": {
-                        "type": "camera",
-                        "label": "Open camera"
-                    }
+                "type": "action",
+                "action": {
+                    "type": "message",
+                    "label": "Yes",
+                    "text": "Yes"
                 }
+            },
+            {
+                "type": "action",
+                "action": {
+                    "type": "uri",
+                    "label": "Phone order",
+                    "uri": "tel:09001234567"
+                }
+            },
+            {
+                "type": "action",
+                "action": {
+                    "type": "clipboard",
+                    "label": "Copy",
+                    "clipboardText": "3B48740B"
+                }
+            },
+            {
+                "type": "action",
+                "action": {
+                    "type": "datetimepicker",
+                    "label": "Select date",
+                    "data": "storeId=12345",
+                    "mode": "date",
+                    "initial": "2024-08-25",
+                    "min": "2024-08-01",
+                    "max": "2024-12-31"
+                }
+
+            },
+            {
+                "type": "action",
+                "action": {
+                    "type": "cameraRoll",
+                    "label": "Send photo"
+                }
+            },
+            {
+                "type": "action",
+                "action": {
+                    "type": "camera",
+                    "label": "Open camera"
+                }
+            }
             ]
         }
     }
@@ -145,7 +145,7 @@ exports.postbackDate = (date) => {
                         "displayText": "ลงทะเบียน",
                         "inputOption": "openKeyboard",
                         "fillInText": `กรอกข้อมูลเพิ่มเติม โดยต้องกรอกข้อมูล\n---\nBooking Date:${date} \nName: \nPhone: \n---`
-                      }
+                    }
                 }
             ]
         }

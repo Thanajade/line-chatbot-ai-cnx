@@ -1,9 +1,11 @@
 const { onRequest } = require("firebase-functions/v2/https");
 const line = require('../util/line.util');
 const messages = require('../message/messages');
+
+const flex = require('../message/flex'); // add flex message
 const crypto = require('crypto');
 
-exports.receive = onRequest({ invoker: "public" },async (request, response) => {
+exports.receive = onRequest({ invoker: "public" }, async (request, response) => {
 
     if (request.method !== "POST") {
         return response.status(200).send("Method Not Allowed");
@@ -18,10 +20,6 @@ exports.receive = onRequest({ invoker: "public" },async (request, response) => {
     const events = request.body.events
     for (const event of events) {
 
-        if (event.source.type !== "group") {
-            await line.isAnimationLoading(event.source.userId)
-        }
-
         console.log(JSON.stringify(event));
 
         switch (event.type) {
@@ -31,9 +29,9 @@ exports.receive = onRequest({ invoker: "public" },async (request, response) => {
                 console.log(JSON.stringify(profile));
 
 
-                if (event.follow.isUnblocked) {
+                if (event.follow.isUnblocked) { // returning user
                     await line.reply(event.replyToken, [messages.welcomeBack(profile)])
-                } else {
+                } else { // new user
                     await line.reply(event.replyToken, [messages.welcomeMessage(profile)])
                 }
                 break;
@@ -43,6 +41,10 @@ exports.receive = onRequest({ invoker: "public" },async (request, response) => {
 
                 break;
             case "message":
+                if (event.source.type !== "group") {
+                    // waiting Animation
+                    await line.isAnimationLoading(event.source.userId)
+                }
                 if (event.message.type === "text") {
                     const profile = await line.getProfile(event.source.userId)
                     switch (event.message.text) {
@@ -69,10 +71,16 @@ exports.receive = onRequest({ invoker: "public" },async (request, response) => {
                         case "queue":
                             await line.replyWithStateless(event.replyToken, [flex.queue()])
                             break;
+                        case "transit":
+                            await line.replyWithStateless(event.replyToken, [flex.transit()])
+                            break;
+                        case "seven":
+                            await line.replyWithStateless(event.replyToken, [flex.seven()])
+                            break;
                         case "booking":
                             await line.replyWithStateless(event.replyToken, [flex.booking()])
                             break;
-                       
+
                         default:
                             break;
                     }
@@ -99,7 +107,7 @@ exports.receive = onRequest({ invoker: "public" },async (request, response) => {
 });
 
 
-exports.group = onRequest({ invoker: "public" },async (request, response) => {
+exports.group = onRequest({ invoker: "public" }, async (request, response) => {
 
     if (request.method !== "POST") {
         return response.status(200).send("Method Not Allowed");
@@ -152,7 +160,7 @@ exports.group = onRequest({ invoker: "public" },async (request, response) => {
                     }
                 }])
                 break;
-                
+
             case "leave":
                 console.log(JSON.stringify(event));
                 break;
@@ -215,7 +223,7 @@ exports.group = onRequest({ invoker: "public" },async (request, response) => {
                         }])
 
                     }
-                   
+
                     if (event.message.text == "me") {
 
                         const profile = await line.getProfileByGroup(event.source.groupId, event.source.userId)
