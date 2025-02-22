@@ -1149,6 +1149,211 @@ exports.seven = () => {
     }
 }
 
+exports.sales = () => {
+    return {
+        "type": "flex",
+        "altText": "Sales by Channel Summary",
+        "contents": {
+            "type": "bubble",
+            "header": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "📊 Sales by Channel",
+                        "weight": "bold",
+                        "size": "xl",
+                        "color": "#1DB446"
+                    },
+                    {
+                        "type": "text",
+                        "text": "Total Value: ฿66,936.11",
+                        "weight": "bold",
+                        "size": "md",
+                        "color": "#000000"
+                    }
+                ]
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "OTC - นุชาภาญ ชูโชติ",
+                                "size": "sm",
+                                "color": "#555555",
+                                "flex": 3
+                            },
+                            {
+                                "type": "text",
+                                "text": "฿29,215.31",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "KEY - Keyaccount",
+                                "size": "sm",
+                                "color": "#555555",
+                                "flex": 3
+                            },
+                            {
+                                "type": "text",
+                                "text": "฿13,327.46",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "OTC - รักเเร่ ลาภหาญ",
+                                "size": "sm",
+                                "color": "#555555",
+                                "flex": 3
+                            },
+                            {
+                                "type": "text",
+                                "text": "฿8,913.20",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "Online - กฤตมนา เทครัว",
+                                "size": "sm",
+                                "color": "#555555",
+                                "flex": 3
+                            },
+                            {
+                                "type": "text",
+                                "text": "฿6,579.46",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "OTC - นภัสมลณี นิดาร",
+                                "size": "sm",
+                                "color": "#555555",
+                                "flex": 3
+                            },
+                            {
+                                "type": "text",
+                                "text": "฿5,054.88",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "OTC - ณัฐธิดาภรณ์ ธนสารบัณฑิตย์",
+                                "size": "sm",
+                                "color": "#555555",
+                                "flex": 3
+                            },
+                            {
+                                "type": "text",
+                                "text": "฿2,565.42",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "ส่วนกลาง - ส่วนกลาง",
+                                "size": "sm",
+                                "color": "#555555",
+                                "flex": 3
+                            },
+                            {
+                                "type": "text",
+                                "text": "฿1,280.38",
+                                "size": "sm",
+                                "color": "#111111",
+                                "align": "end"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "separator",
+                        "margin": "md"
+                    },
+                    {
+                        "type": "text",
+                        "text": "Updated: 2025-02-22 22:30",
+                        "size": "xs",
+                        "color": "#888888",
+                        "align": "center",
+                        "margin": "md"
+                    }
+                ]
+            },
+            "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "spacing": "sm",
+                "contents": [
+                    {
+                        "type": "button",
+                        "style": "primary",
+                        "color": "#1DB446",
+                        "action": {
+                            "type": "uri",
+                            "label": "More Details",
+                            "uri": "https://your-website.com/sales-details"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+
 exports.booking = () => {
     return {
         "type": "flex",

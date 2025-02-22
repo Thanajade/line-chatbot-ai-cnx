@@ -77,6 +77,9 @@ exports.receive = onRequest({ invoker: "public" }, async (request, response) => 
                         case "seven":
                             await line.replyWithStateless(event.replyToken, [flex.seven()])
                             break;
+                        case "sales":
+                            await line.replyWithStateless(event.replyToken, [flex.sales()])
+                            break;
                         case "booking":
                             await line.replyWithStateless(event.replyToken, [flex.booking()])
                             break;
