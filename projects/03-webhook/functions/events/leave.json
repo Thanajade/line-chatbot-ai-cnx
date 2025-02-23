@@ -1,0 +1,13 @@
+{
+  "type": "leave",
+  "webhookEventId": "01JMRDYFFFRZ1V0H4ECPAWB06C",
+  "deliveryContext": {
+    "isRedelivery": false
+  },
+  "timestamp": 1740281691121,
+  "source": {
+    "type": "group",
+    "groupId": "Cef07eeaf7fe1c96d5339775f523d87eb"
+  },
+  "mode": "active"
+}

@@ -6,15 +6,16 @@ const openai = new OpenAI({
     apiKey: `${process.env.OPEN_AI_API_KEY}`
 });
 
-exports.openaiTextRequest = async (message,userId) => {
+exports.openaiTextRequest = async (message, userId) => {
     const completion = await openai.chat.completions.create({
         model: "gpt-4o-mini-2024-07-18",
         user: userId,
-        messages: [{ 
+        // message is array, can be predefined prompt
+        messages: [{
             role: "user",
-            content: message, 
+            content: message,
         }],
-      });
+    });
     console.log(JSON.stringify(completion));
     return completion.choices[0].message.content;
 }
@@ -74,7 +75,7 @@ exports.chatHistory = async (prompt, userId) => {
 
     chatHistory.push({ role: 'assistant', content: reply });
 
-    cache.setCache("cashe_chat_" + userId,chatHistory,600)
+    cache.setCache("cashe_chat_" + userId, chatHistory, 600)
 
     return reply
 }

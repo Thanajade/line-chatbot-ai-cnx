@@ -344,6 +344,7 @@ exports.pushWithStateless = async (userId, payload) => {
 /*Push messsage with channel access token v2.1*/
 exports.pushWithTokenV2 = async (userId, payload) => {
     try {
+        // get token2_1
         const accessToken = await issueTokenv2_1()
 
         const url = `${process.env.LINE_MESSAGING_API}/message/push`;
@@ -427,9 +428,9 @@ exports.broadcastConsumption = async (payload) => {
         const accessToken = await issueStatelessAccessToken();
         // Fetch all required data concurrently
         const [quotaMessage, quotaConsumption, numberOfFollowers] = await Promise.all([
-            getQuota(accessToken),
+            getQuota(accessToken), // Check quota in real time : OA manager summarized next day Tokyo time
             getConsumption(accessToken),
-            getNumberOfFollowers(accessToken),
+            getNumberOfFollowers(accessToken), // Actual No Block data | Raw data and real time
         ]);
 
         console.log("Quota ", quotaMessage);
@@ -437,7 +438,7 @@ exports.broadcastConsumption = async (payload) => {
         console.log("Number Of Followers", numberOfFollowers);
 
         // Calculate remaining quota and compare with the number of followers
-        if (parseInt(quotaMessage.value - quotaConsumption.totalUsage) > numberOfFollowers.followers) {
+        if (parseInt(quotaMessage.value - quotaConsumption.totalUsage) >= numberOfFollowers.followers) {
             const url = `${process.env.LINE_MESSAGING_API}/message/broadcast`;
             const response = await axios.post(url, payload, {
                 headers: {
@@ -493,7 +494,7 @@ Get number of followers
 https://developers.line.biz/en/reference/messaging-api/#get-number-of-followers
 */
 async function getNumberOfFollowers(accessToken) {
-   const currentDate = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+    const currentDate = new Date().toISOString().slice(0, 10).replace(/-/g, '');
     const url = `${process.env.LINE_MESSAGING_API}/insight/followers?date=${currentDate}`;
     const response = await axios.get(url, {
         headers: {
@@ -544,48 +545,49 @@ async function issueStatelessAccessToken() {
 
 
 /* Channel Access Token v2.1 : min 30 minute to max 30 Day */
+// generate private token via private key
 async function issueTokenv2_1() {
     const jwk = lineOauthPrivate.privateKey
 
     // Signing key and payload for JWT
     const LINE_SIGNING_KEY = {
-      alg: "RS256",
-      typ: "JWT",
-      kid: process.env.ASSERTION_SIGNING_KEY,
+        alg: "RS256",
+        typ: "JWT",
+        kid: process.env.ASSERTION_SIGNING_KEY,
     };
 
     const payload = {
-      iss: process.env.LINE_MESSAGING_CHANNEL_ID,
-      sub: process.env.LINE_MESSAGING_CHANNEL_ID,
-      aud: "https://api.line.me/",
-      exp: Math.floor(Date.now() / 1000) + 1800, // 30 minutes expiration
-      token_exp: 2592000, // 30 days expiration
+        iss: process.env.LINE_MESSAGING_CHANNEL_ID,
+        sub: process.env.LINE_MESSAGING_CHANNEL_ID,
+        aud: "https://api.line.me/",
+        exp: Math.floor(Date.now() / 1000) + 1800, // 30 minutes expiration
+        token_exp: 2592000, // 30 days expiration
     };
-  
+
     // Create signed JWT
     const clientAssertion = await jose.JWS.createSign({ format: "compact", fields: LINE_SIGNING_KEY }, jwk)
-      .update(JSON.stringify(payload))
-      .final();
-  
+        .update(JSON.stringify(payload))
+        .final();
+
     // Prepare data for POST request
     const data = new URLSearchParams({
         grant_type: 'client_credentials',
         client_assertion_type: 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer',
         client_assertion: clientAssertion
-      });
-  
-      // Axios config for issuing token
-      const response = await axios.post(process.env.LINE_MESSAGING_OAUTH_ISSUE_TOKENV2, data, {
+    });
+
+    // Axios config for issuing token
+    const response = await axios.post(process.env.LINE_MESSAGING_OAUTH_ISSUE_TOKENV2, data, {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      });
-  
-      // Return access token or throw error if missing
-      if (response.status === 200 && response.data?.access_token) {
+    });
+
+    // Return access token or throw error if missing
+    if (response.status === 200 && response.data?.access_token) {
         return response.data.access_token;
-      } else {
+    } else {
         throw new Error('Failed to obtain access token.');
-      }
-  }
+    }
+}
 
 /*
 #verify-signature

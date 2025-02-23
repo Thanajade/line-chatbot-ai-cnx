@@ -5,6 +5,13 @@ const line = require('../util/line.util');
 const flex = require('../message/flex');
 
 
+// Package 35,000 message
+// Used 34,000
+// Remain 1,000
+// Follower 2,000 
+// Can Broadcast???
+// broadcast only no block user
+// 
 exports.broadcast = onRequest(async (request, response) => {
 
     if (request.method !== "POST") {
@@ -16,6 +23,7 @@ exports.broadcast = onRequest(async (request, response) => {
 
 });
 
+// send message by user segment, beware of rate limit 2,000 msg per second
 exports.multicast = onRequest(async (request, response) => {
 
     if (request.method !== "POST") {
@@ -62,6 +70,10 @@ exports.multicast = onRequest(async (request, response) => {
 
 });
 
+
+// Secured push message via JWT token by preregister private and public key
+// private key store in vault
+// public key register in LINE manager
 exports.push = onRequest(async (request, response) => {
 
     const userId = request.body.to

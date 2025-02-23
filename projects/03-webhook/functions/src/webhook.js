@@ -106,19 +106,15 @@ exports.destination = onRequest(async (request, response) => {
     if (request.method !== "POST") {
         return response.status(200).send("Method Not Allowed");
     }
-    const signature = crypto.createHmac('SHA256', process.env.LINE_MESSAGING_CHANNEL_SECRET).update(request.rawBody).digest('base64').toString();
-    if (request.headers['x-line-signature'] !== signature) {
-        return res.status(401).send('Unauthorized');
-    }
+    // const signature = crypto.createHmac('SHA256', process.env.LINE_MESSAGING_CHANNEL_SECRET).update(request.rawBody).digest('base64').toString();
+    // if (request.headers['x-line-signature'] !== signature) {
+    //     return res.status(401).send('Unauthorized');
+    // }
 
 
     const destination = request.body.destination
     const events = request.body.events
     for (const event of events) {
-
-        if (event.source.type !== "group") {
-            await line.isAnimationLoading(event.source.userId)
-        }
 
         console.log("destination : " + destination);
 
@@ -127,13 +123,17 @@ exports.destination = onRequest(async (request, response) => {
 
             case "message":
 
+                if (event.source.type !== "group") {
+                    await line.isAnimationLoading(event.source.userId)
+                }
+
 
                 if (event.message.type === "text") {
                     const profile = await line.getProfile(event.source.userId)
-                    if (destination === process.env.LINE_MESSAGING_DESTINATION) {
+                    if (destination === process.env.LINE_MESSAGING_DESTINATION) { // channel A Messaging Destination = Chatbot A
                         await line.replyWithStateless(event.replyToken, [messages.welcomeMessage(profile)])
                     }
-                    if (destination === process.env.LINE_MESSAGING_DESTINATION_B) {
+                    if (destination === process.env.LINE_MESSAGING_DESTINATION_B) { // channel B Messaging Destination = Chatbot B
                         console.log(JSON.stringify(event));
 
                     }
@@ -201,7 +201,7 @@ exports.group = onRequest(async (request, response) => {
                     }
                 }])
                 break;
-                
+
             case "leave":
                 console.log(JSON.stringify(event));
                 break;
@@ -264,7 +264,7 @@ exports.group = onRequest(async (request, response) => {
                         }])
 
                     }
-                   
+
                     if (event.message.text == "me") {
 
                         const profile = await line.getProfileByGroup(event.source.groupId, event.source.userId)
@@ -312,6 +312,7 @@ exports.group = onRequest(async (request, response) => {
 
 });
 
+// set messag to be expirable
 exports.timeout = onRequest(async (request, response) => {
 
     if (request.method !== "POST") {

@@ -1,0 +1,14 @@
+{
+  "type": "join",
+  "webhookEventId": "01JMRE35VCHB9FYFKM5XZ5HGNN",
+  "deliveryContext": {
+    "isRedelivery": false
+  },
+  "timestamp": 1740281845344,
+  "source": {
+    "type": "group",
+    "groupId": "Cef07eeaf7fe1c96d5339775f523d87eb"
+  },
+  "replyToken": "664a567ecf42467884fb475c27a18eb4",
+  "mode": "active"
+}

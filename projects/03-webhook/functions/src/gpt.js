@@ -11,10 +11,10 @@ exports.receive = onRequest(async (request, response) => {
     if (request.method !== "POST") {
         return response.status(200).send("Method Not Allowed");
     }
-    const signature = crypto.createHmac('SHA256', process.env.LINE_MESSAGING_CHANNEL_SECRET).update(request.rawBody).digest('base64').toString();
-    if (request.headers['x-line-signature'] !== signature) {
-        return res.status(401).send('Unauthorized');
-    }
+    // const signature = crypto.createHmac('SHA256', process.env.LINE_MESSAGING_CHANNEL_SECRET).update(request.rawBody).digest('base64').toString();
+    // if (request.headers['x-line-signature'] !== signature) {
+    //     return res.status(401).send('Unauthorized');
+    // }
 
     const events = request.body.events
     for (const event of events) {
@@ -63,10 +63,10 @@ exports.history = onRequest(async (request, response) => {
     if (request.method !== "POST") {
         return response.status(200).send("Method Not Allowed");
     }
-    const signature = crypto.createHmac('SHA256', process.env.LINE_MESSAGING_CHANNEL_SECRET).update(request.rawBody).digest('base64').toString();
-    if (request.headers['x-line-signature'] !== signature) {
-        return res.status(401).send('Unauthorized');
-    }
+    // const signature = crypto.createHmac('SHA256', process.env.LINE_MESSAGING_CHANNEL_SECRET).update(request.rawBody).digest('base64').toString();
+    // if (request.headers['x-line-signature'] !== signature) {
+    //     return res.status(401).send('Unauthorized');
+    // }
 
     const events = request.body.events
     for (const event of events) {
@@ -86,9 +86,10 @@ exports.history = onRequest(async (request, response) => {
 
                 let response = await gpt.chatHistory(event.message.text, userId);
 
-                const isCheckFormatJson = response.includes('json');
+                // const isCheckFormatJson = response.includes('json');
 
-                if (isCheckFormatJson) {
+                // if (isCheckFormatJson) {
+                if (isValidateJSON(response)) {
 
                     const cleanedString = response.replace(/json/g, '').replace(/```/g, '').trim();
                     const order = JSON.parse(cleanedString);
@@ -155,9 +156,9 @@ exports.disc = onRequest(async (request, response) => {
 
         }
         if (event.type === "message" && event.message.type === "text") {
-            
+
             const profile = await line.getProfile(event.source.userId)
-           
+
             if (event.message.text === "ฉันได้ประเมินเรียบร้อยแล้ว") {
 
 
@@ -193,7 +194,7 @@ exports.disc = onRequest(async (request, response) => {
 });
 
 
-exports.createAnswerByUserId = onRequest({ cors: true}, async (request, response) => {
+exports.createAnswerByUserId = onRequest({ cors: true }, async (request, response) => {
 
     try {
         if (request.method !== "POST") {
@@ -203,7 +204,7 @@ exports.createAnswerByUserId = onRequest({ cors: true}, async (request, response
         const profile = await line.getProfileByIDToken(request.headers.authorization);
 
         const {
-            answers 
+            answers
         } = request.body;
         const answersMapIndex = answers.map((answer, index) => `${index + 1}. ${answer}`);
 
@@ -228,3 +229,13 @@ exports.createAnswerByUserId = onRequest({ cors: true}, async (request, response
     }
 
 });
+
+// add isValidateJSON function
+function isValidateJSON(str) {
+    try {
+        JSON.parse(str);
+        return true;
+    } catch (error) {
+        return false;
+    }
+}
