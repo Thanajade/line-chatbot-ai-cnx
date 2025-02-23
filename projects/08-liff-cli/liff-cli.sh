@@ -5,8 +5,10 @@ npm --version
 npm install -g @line/liff-cli
 
 liff-cli channel add xxxx
+liff-cli channel add 1653566027
 
 liff-cli channel use xxxx
+liff-cli channel use 1653566027
 
 liff-cli app create \
    --name "LIFF CLI Demo" \
@@ -31,24 +33,21 @@ liff-cli app list
 # LIFF apps:
 # 1234567890-Jv5mrQdE: LIFF CLI Demo
 
-
 liff-cli app delete \
    --liff-id 1234567890-Jv5mrQdE \
    --channel-id 1234567890
 # Deleting LIFF app...
 # Successfully deleted LIFF app: 1234567890-Jv5mrQdE
 
-
 # For macOS (using Homebrew)
+# generate free https cert
 brew install mkcert
 
 # For Windows (using Chocolatey)
 choco install mkcert
 
-
 mkcert -install
 # The local CA is now installed in the system trust store! ⚡️
-
 
 mkcert localhost
 
@@ -61,7 +60,7 @@ mkcert localhost
 liff-cli serve \
    --liff-id 1234567890-R0BoYE9W \
    --url http://localhost:5173
-   # --port 
+# --port
 
 # Successfully updated endpoint url for LIFF ID: 1234567890-Jv5mrQdE.
 # →  LIFF URL:     https://liff.line.me/1234567890-Jv5mrQdE

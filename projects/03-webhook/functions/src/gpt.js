@@ -201,6 +201,7 @@ exports.createAnswerByUserId = onRequest({ cors: true }, async (request, respons
             return response.status(200).send("Method Not Allowed");
         }
 
+        // get user profile by ID token - serverside
         const profile = await line.getProfileByIDToken(request.headers.authorization);
 
         const {

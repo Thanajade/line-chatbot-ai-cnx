@@ -53,13 +53,13 @@
 
     <!-- ปุ่มสำหรับการส่งข้อความและเปิด browser-->
     <div class="button-group">
-      <button v-if="isShowButton" @click="sendMessage" class="btn">Send Message</button>
+      <button v-if="isShowSendMessage" @click="sendMessage" class="btn">Send Message</button>
       <button @click="openWindowModule" class="btn">Open Windown</button>
     </div>
     <!-- ปุ่มสำหรับการแชร์และ แสกน qrcode-->
     <div class="button-group">
       <button @click="shareMessage" class="btn">Share via LINE</button>
-      <button v-if="isShowButton" @click="openQRCodeModule" class="btn">Scan QR</button>
+      <button v-if="isShowSendMessage" @click="openQRCodeModule" class="btn">Scan QR</button>
     </div>
   </div>
 
@@ -67,6 +67,7 @@
 
 <script>
 import liff from "@line/liff";
+import OpenWindowModule from "@line/liff/open-window";
 export default {
   beforeCreate() {
     liff
@@ -93,7 +94,7 @@ export default {
       lineVersion: null,
       isInClient: null,
       isApiAvailable: null,
-      isShowButton: false,
+      isShowSendMessage: false,
       message: "",
       error: ""
     };
@@ -131,7 +132,7 @@ export default {
           this.lineVersion = liff.getLineVersion();
           this.isInClient = liff.isInClient();
           if (liff.isInClient()) {
-            this.isShowButton = true
+            this.isShowSendMessage = true
           }
           this.isApiAvailable = liff.isApiAvailable('shareTargetPicker'); // ตัวอย่างการตรวจสอบ API
 
@@ -139,9 +140,9 @@ export default {
       })
     },
 
-    // 
+    // ฟังก์ชันเปิด Browser และเปิด URL ที่กำหนด
     async openWindowModule() {
-      await liff.openWindow({
+      liff.openWindow({
         url: "https://line.me",
         external: true,
       });
@@ -153,6 +154,7 @@ export default {
           .scanCodeV2()
           .then((result) => {
             alert(JSON.stringify(result))
+            // can get user profile from scan result
           })
           .catch((error) => {
             console.log("error", error);
